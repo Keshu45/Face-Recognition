@@ -131,9 +131,15 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Premium Animated Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] bg-blue-500/10 rounded-full mix-blend-multiply filter blur-[100px] animate-float"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[40vw] h-[40vw] bg-purple-500/10 rounded-full mix-blend-multiply filter blur-[100px] animate-float animation-delay-2000"></div>
+      </div>
+
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-lg border-b border-slate-200 shadow-sm">
+      <header className="glass-panel border-b border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] sticky top-0 z-50">
         <div className="px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Left Section */}
@@ -226,10 +232,8 @@ export default function DashboardPage() {
                 onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
                 onClick={() => router.push(option.path)}
-                className={`relative p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer group overflow-hidden bg-white hover:shadow-xl ${
-                  option.borderColor
-                } ${
-                  activeCard === index ? 'scale-105 shadow-xl -translate-y-1' : 'hover:scale-105 hover:-translate-y-1'
+                className={`relative p-6 rounded-2xl border border-white/60 transition-all duration-500 cursor-pointer group overflow-hidden glass-panel bg-white/60 backdrop-blur-xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] ${
+                  activeCard === index ? 'scale-105 -translate-y-1' : 'hover:scale-105 hover:-translate-y-1'
                 }`}
               >
                 {/* Animated Background */}

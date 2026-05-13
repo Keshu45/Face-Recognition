@@ -57,11 +57,13 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute -top-40 -right-32 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000"></div>
+      {/* Premium Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden bg-slate-50">
+        <div className="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] bg-purple-500/20 rounded-full mix-blend-multiply filter blur-[100px] animate-float"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[40vw] h-[40vw] bg-blue-500/20 rounded-full mix-blend-multiply filter blur-[100px] animate-float animation-delay-2000"></div>
+        <div className="absolute top-[40%] left-[20%] w-[20vw] h-[20vw] bg-emerald-400/20 rounded-full mix-blend-multiply filter blur-[80px] animate-float animation-delay-4000"></div>
+        {/* Subtle mesh grid overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDQwIEwgNDAgNDAgTCA0MCAwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMCwgMCwgMCwgMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-50"></div>
       </div>
 
       {/* Header */}
@@ -102,7 +104,7 @@ export default function SignUpPage() {
       <main className="flex items-center justify-center p-4 sm:p-6 relative z-10">
         <div className="w-full max-w-md">
           {/* Sign Up Form */}
-          <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border-2 border-slate-200 shadow-xl mt-8">
+          <div className="glass-panel bg-white/70 backdrop-blur-2xl rounded-[2rem] p-8 sm:p-10 border border-white/60 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] mt-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* User Type Selection */}
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
