@@ -49,7 +49,7 @@ export default function DashboardPage() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://127.0.0.1:5000/api/logout", {
+      await fetch("https://frs-backend-ffcq.onrender.com/api/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });

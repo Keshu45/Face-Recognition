@@ -101,7 +101,7 @@ export default function UpdateStudentDetails() {
 
   const fetchStudents = async (email: string, type: "student" | "teacher") => {
     try {
-      let url = "http://127.0.0.1:5000/api/students";
+      let url = "https://frs-backend-ffcq.onrender.com/api/students";
       let headers: Record<string, string> = {
         "Content-Type": "application/json",
         "X-User-Type": type
@@ -112,7 +112,7 @@ export default function UpdateStudentDetails() {
         headers["X-User-Email"] = email;
       } else {
         // For teachers: get all students (admin access)
-        url = "http://127.0.0.1:5000/api/admin/students";
+        url = "https://frs-backend-ffcq.onrender.com/api/admin/students";
         headers["X-User-Email"] = email;
       }
 
@@ -217,7 +217,7 @@ export default function UpdateStudentDetails() {
         headers["X-User-Email"] = userEmail;
       }
 
-      const res = await fetch(`http://127.0.0.1:5000/api/students/${selectedStudent._id}`, {
+      const res = await fetch(`https://frs-backend-ffcq.onrender.com/api/students/${selectedStudent._id}`, {
         method: "PUT",
         headers,
         body: JSON.stringify({
@@ -262,7 +262,7 @@ export default function UpdateStudentDetails() {
     }
 
     try {
-      const res = await fetch(`http://127.0.0.1:5000/api/students/${studentId}`, {
+      const res = await fetch(`https://frs-backend-ffcq.onrender.com/api/students/${studentId}`, {
         method: "DELETE",
         headers: { 
           "Content-Type": "application/json",

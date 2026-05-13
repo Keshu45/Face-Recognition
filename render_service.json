@@ -1,0 +1,38 @@
+{
+  "type": "web_service",
+  "name": "frs-backend",
+  "ownerId": "tea-d7s7cg3rjlhs7385ntlg",
+  "repo": "https://github.com/Keshu45/Face-Recognition",
+  "branch": "master",
+  "serviceDetails": {
+    "env": "python",
+    "region": "oregon",
+    "plan": "free",
+    "envSpecificDetails": {
+      "buildCommand": "pip install -r backend/requirements.txt",
+      "startCommand": "gunicorn --chdir backend app:app"
+    },
+    "envVars": [
+      {
+        "key": "MONGODB_URI",
+        "value": "mongodb+srv://ksvpatidar3180_db_user:3fnAVnA13pSjmHx0@cluster0.fxqbkmm.mongodb.net/?appName=Cluster0"
+      },
+      {
+        "key": "DATABASE_NAME",
+        "value": "facerecognition"
+      },
+      {
+        "key": "COLLECTION_NAME",
+        "value": "students"
+      },
+      {
+        "key": "THRESHOLD",
+        "value": "0.6"
+      },
+      {
+        "key": "PYTHON_VERSION",
+        "value": "3.11.0"
+      }
+    ]
+  }
+}
